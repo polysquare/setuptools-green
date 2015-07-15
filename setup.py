@@ -11,7 +11,7 @@ from setuptools import setup
 from setuptools_green import GreenTestCommand
 
 setup(name="setuptools-green",
-      version="0.0.8",
+      version="0.0.9",
       description="Provides a 'test' command for running tests with green",
       long_description_markdown_filename="README.md",
       author="Sam Spilsbury",
@@ -45,5 +45,9 @@ setup(name="setuptools-green",
               "green=setuptools_green:GreenTestCommand",
           ]
       },
+      dependency_links=[
+          ("http://github.com/smspillaz/green/tarball/"
+           "process-overhaul-modules-subprocesses#egg=green-1.11.0")
+      ],
       zip_safe=True,
       include_package_data=True)
